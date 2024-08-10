@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.cdnfonts.com/css/emotional-baggage");
+@import url("https://fonts.cdnfonts.com/css/comic-neue");
+
+.baggage {
+  font-family: "Emotional Baggage", sans-serif;
+}
+
+.comic {
+  font-family: "Comic Neue", sans-serif;
+}
+
+.mainhero {
+  background-image: url(./assets/grassbg.png);
+  background-size: contain;
+}
+
+.howto {
+  background-image: url(./assets/cloudbackground.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.joinbg {
+  background-image: url(./assets/joinbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gallery {
+  background-image: url(./assets/fieldlowerbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.linkbg {
+  background-image: url(./assets/bgtexture.svg);
+  background-size: contain;
+}
+
+.noise {
+  background-imagee: url(./assets/noise.png);
+  background-size: contain;
+  background-color: #28d5ff;
+}
+
+.noise2 {
+  background-imagee: url(./assets/noise.png);
+  background-size: contain;
+  background-color: #d6ebfe;
+}
+
+@media (max-width: 768px) {
+  .mainhero {
+    background-size: cover;
+  }
+  .howto {
+    /* background-size: cover; */
+  }
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(-200px);
+  }
+  25% {
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateX(-200px);
+  }
+  75% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+.move-left-right {
+  animation: moveLeftRight 5s infinite;
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+.moving-image {
+  animation: moveLeftToRight 15s linear infinite;
+}
+
+@keyframes moveLeftToRight2 {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+.moving-image2 {
+  animation: moveLeftToRight2 15s linear infinite;
+}
