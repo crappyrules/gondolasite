@@ -1,3 +1,7 @@
+<p align="center" width="100%">
+    <img src="https://github.com/crappyrules/gondolasite/blob/master/src/assets/banner.jpg"> 
+</p>
+
 # Getting Started 
 
 https://gondola.lol
