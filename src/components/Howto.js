@@ -32,9 +32,8 @@ function Howto() {
                     </Fade>
                 </div>
                 <div className="right z-20">
-                    <Fade right cascade >
-
-                        <img src={sittingdola} alt="" className='w-[700px] p-4 ' />
+                    <Fade right cascade >  
+                        <iframe class="embed-responsive-item" src="https://flooz.xyz/embed/trade?swapDisabled=false&swapNetwork=eth&swapToTokenAddress=0xd43fbA1f38d9B306AEEF9d78aD177d51Ef802B46&swapLockToToken=true&onRampDisabled=false&onRampNetwork=eth&onRampAsDefault=true&onRampTokenAddress=0xd43fbA1f38d9B306AEEF9d78aD177d51Ef802B46&onRampLockToken=true&network=eth&lightMode=true&backgroundColor=transparent&miniApp=false&miniappIntent=swap" allowfullscreen className='w-[400px] h-[680px] p-4 ' ></iframe>
                     </Fade>
                 </div>
             </div>
