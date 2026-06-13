@@ -12,15 +12,15 @@ function Tokenomics() {
         <div id='tokenomics' className='flex flex-col justify-center items-center bg-[#B3E7FE] w-full py-20'>
             <Fade cascade big >
 
-                <img src={tokenomics} alt="" className='w-9/12' />
+                <img src={tokenomics} alt="" className='w-9/12' loading="lazy" decoding="async" />
             </Fade>
 
             <div className=' flex flex-col lg:flex-row justify-center items-center'>
                 <Fade cascade big >
-                    <img src={taxes} alt="" className='p-2  lg:w-80 w-96 ' />
-                    <img src={liq} alt="" className='p-2  lg:w-80 w-96 ' />
-                    <img src={supply} alt="" className='p-2  lg:w-80 w-96 ' />
-                    <img src={contractrev} alt="" className='p-2  lg:w-80 w-96 ' />
+                    <img src={taxes} alt="" className='p-2  lg:w-80 w-96 ' loading="lazy" decoding="async" />
+                    <img src={liq} alt="" className='p-2  lg:w-80 w-96 ' loading="lazy" decoding="async" />
+                    <img src={supply} alt="" className='p-2  lg:w-80 w-96 ' loading="lazy" decoding="async" />
+                    <img src={contractrev} alt="" className='p-2  lg:w-80 w-96 ' loading="lazy" decoding="async" />
                 </Fade>
             </div>
             {/* <img src={ca2} alt="" className='p-2 lg:w-10/12' /> */}

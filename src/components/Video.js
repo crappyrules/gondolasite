@@ -5,24 +5,22 @@ import play from '../assets/play.png';
 function Video() {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isInView, setIsInView] = useState(false);
+    const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
     useEffect(() => {
         const videoElement = videoRef.current;
+        if (!videoElement) {
+            return;
+        }
 
         const handleIntersection = (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    videoElement.muted = false;
-                    videoElement.play().then(() => {
-                        setIsPlaying(true);
-                    }).catch(error => {
-                        console.error('Autoplay failed:', error);
-                        setIsPlaying(false); // Show play button if autoplay fails
-                    });
+                    setShouldLoadVideo(true);
+                    setIsInView(true);
                 } else {
-                    videoElement.muted = true;
-                    videoElement.pause();
-                    setIsPlaying(false); // Show play button when paused
+                    setIsInView(false);
                 }
             });
         };
@@ -31,25 +29,38 @@ function Video() {
             threshold: 0.5,
         });
 
-        if (videoElement) {
-            observer.observe(videoElement);
-            videoElement.play().then(() => {
-                setIsPlaying(true);
-            }).catch(error => {
-                console.error('Initial play failed:', error);
-                setIsPlaying(false); // Show play button if initial play fails
-            });
-        }
+        observer.observe(videoElement);
 
         return () => {
-            if (videoElement) {
-                observer.unobserve(videoElement);
-            }
+            observer.unobserve(videoElement);
         };
     }, []);
 
+    useEffect(() => {
+        const videoElement = videoRef.current;
+        if (!videoElement || !shouldLoadVideo) {
+            return;
+        }
+
+        if (isInView) {
+            videoElement.muted = false;
+            videoElement.play().then(() => {
+                setIsPlaying(true);
+            }).catch(error => {
+                console.error('Autoplay failed:', error);
+                setIsPlaying(false);
+            });
+        } else {
+            videoElement.muted = true;
+            videoElement.pause();
+            setIsPlaying(false);
+        }
+    }, [isInView, shouldLoadVideo]);
+
     const handlePlayButtonClick = () => {
         const videoElement = videoRef.current;
+        setShouldLoadVideo(true);
+        videoElement.muted = false;
         videoElement.play().then(() => {
             setIsPlaying(true);
         }).catch(error => {
@@ -61,8 +72,8 @@ function Video() {
         <div className='lg:absolute z-10 flex justify-center items-center'>
             <video
                 ref={videoRef}
-                src={gondolavid}
-                autoPlay
+                src={shouldLoadVideo ? gondolavid : undefined}
+                preload="none"
                 loop
                 muted
                 playsInline

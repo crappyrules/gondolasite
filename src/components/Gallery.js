@@ -15,11 +15,11 @@ function Gallery() {
     return (
         <div className='gallery flex flex-col justify-center items-center w-full '>
 
-            <img src={gallery} alt="" className='w-96 lg:w-[700px]' />
+            <img src={gallery} alt="" className='w-96 lg:w-[700px]' loading="lazy" decoding="async" />
             <div className="artog px-4 lg:px-20">
-                <img src={artog} alt="" className='mb-2 lg:mb-7' />
-                <img src={art1} alt="" className='mb-2 lg:mb-7' />
-                <img src={art2} alt="" className='mb-2 lg:mb-7' />
+                <img src={artog} alt="" className='mb-2 lg:mb-7' loading="lazy" decoding="async" />
+                <img src={art1} alt="" className='mb-2 lg:mb-7' loading="lazy" decoding="async" />
+                <img src={art2} alt="" className='mb-2 lg:mb-7' loading="lazy" decoding="async" />
             </div>
 
 

@@ -15,17 +15,17 @@ function What() {
 
             <Bounce left>
 
-                <img src={miniscarfdola} alt="" className='w-96 absolute -top-20  right-0 ' />
+                <img src={miniscarfdola} alt="" className='w-96 absolute -top-20  right-0 ' loading="lazy" decoding="async" />
             </Bounce>
             <Bounce right>
 
-                <img src={whatis} alt="" className='w-11/12 hidden lg:flex mb-3 z-10' />
+                <img src={whatis} alt="" className='w-11/12 hidden lg:flex mb-3 z-10' loading="lazy" decoding="async" />
             </Bounce>
 
-            <img src={whatismobile} alt="" className='w-10/12 lg:hidden flex mb-3 z-10' />
-            <img src={gondolaaboutmobile} alt="" className='lg:hidden flex mb-3 z-10' />
+            <img src={whatismobile} alt="" className='w-10/12 lg:hidden flex mb-3 z-10' loading="lazy" decoding="async" />
+            <img src={gondolaaboutmobile} alt="" className='lg:hidden flex mb-3 z-10' loading="lazy" decoding="async" />
             <div className="aboutt relative flex justify-center items-center">
-                <img src={gondolaabout} alt="" className='hidden lg:flex z-10' />
+                <img src={gondolaabout} alt="" className='hidden lg:flex z-10' loading="lazy" decoding="async" />
                 <Video />
             </div>
 

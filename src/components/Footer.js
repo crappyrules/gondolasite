@@ -1,5 +1,4 @@
 import React from 'react'
-import cabottom from '../assets/cabottom.png'
 import year from '../assets/year.png'
 import about from '../assets/about.svg'
 import tokenomics from '../assets/tokenomics.svg'
@@ -13,20 +12,20 @@ function Footer() {
 
             <div className="cl flex flex-row justify-center items-center mt-5 lg:mt-0">
                 <a href="#about">
-                    <img src={about} alt="" className='lg:w-52 w-16' />
+                    <img src={about} alt="" className='lg:w-52 w-16' loading="lazy" decoding="async" />
                 </a>
-                <img src={middleline} alt="" className='w-3 mx-2 lg:w-10 lg:mx-5 flex' />
+                <img src={middleline} alt="" className='w-3 mx-2 lg:w-10 lg:mx-5 flex' loading="lazy" decoding="async" />
                 <a href="#howto">
-                    <img src={howto} alt="" className='lg:w-96 w-32' />
+                    <img src={howto} alt="" className='lg:w-96 w-32' loading="lazy" decoding="async" />
                 </a>
 
-                <img src={middleline} alt="" className='w-3 mx-2 lg:w-10 lg:mx-5 flex' />
+                <img src={middleline} alt="" className='w-3 mx-2 lg:w-10 lg:mx-5 flex' loading="lazy" decoding="async" />
                 <a href="#tokenomics">
-                    <img src={tokenomics} alt="" className='lg:w-96 w-32' />
+                    <img src={tokenomics} alt="" className='lg:w-96 w-32' loading="lazy" decoding="async" />
                 </a>
             </div>
 
-            <img src={year} alt="" className='w-32 lg:w-96 ' />
+            <img src={year} alt="" className='w-32 lg:w-96 ' loading="lazy" decoding="async" />
 
             {/* Email link */}
             <a href="mailto:admin@gondola.lol" className='baggage'>
