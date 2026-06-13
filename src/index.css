@@ -13,23 +13,23 @@
 }
 
 .mainhero {
-  background-image: url(./assets/grassbg.png);
+  background-image: url(./assets/grassbg.webp);
   background-size: contain;
 }
 
 .howto {
-  background-image: url(./assets/cloudbackground.png);
+  background-image: url(./assets/cloudbackground.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .joinbg {
-  background-image: url(./assets/joinbg.png);
+  background-image: url(./assets/joinbg.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .gallery {
-  background-image: url(./assets/fieldlowerbg.png);
+  background-image: url(./assets/fieldlowerbg.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -40,13 +40,13 @@
 }
 
 .noise {
-  background-imagee: url(./assets/noise.png);
+  background-imagee: url(./assets/noise.webp);
   background-size: contain;
   background-color: #28d5ff;
 }
 
 .noise2 {
-  background-imagee: url(./assets/noise.png);
+  background-imagee: url(./assets/noise.webp);
   background-size: contain;
   background-color: #d6ebfe;
 }

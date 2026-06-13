@@ -7,7 +7,7 @@ import tiktok from '../assets/tiktok.svg'
 import twitter from '../assets/twitter.svg'
 import linkhalfbox from '../assets/linkhalfbox.svg'
 import linkhalfboxmobile from '../assets/linkhalfboxmobile.svg'
-import mountaingondola from '../assets/mountaingondola.png'
+import mountaingondola from '../assets/mountaingondola.webp'
 import Fade from 'react-reveal/Fade';
 
 function Link() {

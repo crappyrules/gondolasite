@@ -1,6 +1,6 @@
 import roll2 from './assets/roll2.svg'
-import pinkblur from './assets/pinkblur.png'
-import pinkblur2 from './assets/pinkblur2.png'
+import pinkblur from './assets/pinkblur.webp'
+import pinkblur2 from './assets/pinkblur2.webp'
 import Hero from './components/Hero'
 import Link from './components/Link'
 import Buy from './components/Buy'
@@ -11,7 +11,7 @@ import Gallery from './components/Gallery'
 import Theblack from './components/Theblack'
 import Footer from './components/Footer'
 import Join from './components/Join'
-import blockspotImage from './assets/blockspot.png'
+import blockspotImage from './assets/blockspot.webp'
 
 function App() {
   return (

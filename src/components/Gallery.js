@@ -6,10 +6,10 @@ import ari from '../assets/ari.svg'
 import specimen1 from '../assets/specimen1.svg'
 import specimen2 from '../assets/specimen2.svg'
 import longspecimen from '../assets/longspecimen.svg'
-import art1 from '../assets/art1.png'
-import art2 from '../assets/art2.png'
-import artog from '../assets/artog.png'
-import gallery from '../assets/gallery.png'
+import art1 from '../assets/art1.webp'
+import art2 from '../assets/art2.webp'
+import artog from '../assets/artog.webp'
+import gallery from '../assets/gallery.webp'
 
 function Gallery() {
     return (

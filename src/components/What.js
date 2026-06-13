@@ -1,9 +1,9 @@
 import React from 'react'
 import whatis from '../assets/whatis.svg'
 import whatismobile from '../assets/whatismobile.svg'
-import gondolaabout from '../assets/gondolaabout.png'
-import gondolaaboutmobile from '../assets/gondolaaboutmobile.png'
-import miniscarfdola from '../assets/miniscarfdola.png'
+import gondolaabout from '../assets/gondolaabout.webp'
+import gondolaaboutmobile from '../assets/gondolaaboutmobile.webp'
+import miniscarfdola from '../assets/miniscarfdola.webp'
 
 import Fade from 'react-reveal/Fade';
 import Bounce from 'react-reveal/Bounce';

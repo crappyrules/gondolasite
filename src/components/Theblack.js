@@ -1,5 +1,5 @@
 import React from 'react'
-import whalephoto from '../assets/whalephoto.png'
+import whalephoto from '../assets/whalephoto.webp'
 import Fade from 'react-reveal/Fade';
 
 function Theblack() {

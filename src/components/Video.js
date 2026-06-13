@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import gondolavid from '../assets/gondolavid.mp4';
-import play from '../assets/play.png';
+import play from '../assets/play.webp';
 
 function Video() {
     const videoRef = useRef(null);

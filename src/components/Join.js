@@ -1,5 +1,5 @@
 import React from 'react'
-import joincommunity from '../assets/joincommunity.png'
+import joincommunity from '../assets/joincommunity.webp'
 import xround from '../assets/xround.svg'
 import tiktokround from '../assets/tiktokround.svg'
 import tground from '../assets/tground.svg'

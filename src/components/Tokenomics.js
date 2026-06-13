@@ -1,10 +1,10 @@
 import React from 'react'
-import tokenomics from '../assets/tokenomics.png'
-import supply from '../assets/supply.png'
-import liq from '../assets/liq.png'
-import taxes from '../assets/taxes.png'
-import contractrev from '../assets/contractrev.png'
-import ca2 from '../assets/ca2.png'
+import tokenomics from '../assets/tokenomics.webp'
+import supply from '../assets/supply.webp'
+import liq from '../assets/liq.webp'
+import taxes from '../assets/taxes.webp'
+import contractrev from '../assets/contractrev.webp'
+import ca2 from '../assets/ca2.webp'
 import Fade from 'react-reveal/Fade';
 
 function Tokenomics() {

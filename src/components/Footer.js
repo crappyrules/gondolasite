@@ -1,5 +1,5 @@
 import React from 'react'
-import year from '../assets/year.png'
+import year from '../assets/year.webp'
 import about from '../assets/about.svg'
 import tokenomics from '../assets/tokenomics.svg'
 import middleline from '../assets/middleline.svg'

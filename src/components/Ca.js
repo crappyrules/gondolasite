@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CA from '../assets/CA.png';
-import copiedImg from '../assets/copied.png';
+import CA from '../assets/CA.webp';
+import copiedImg from '../assets/copied.webp';
 
 function Ca() {
     const [isCopied, setIsCopied] = useState(false);
