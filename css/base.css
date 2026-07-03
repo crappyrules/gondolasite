@@ -1,0 +1,291 @@
+/* =========================================================================
+   base.css — shared foundation for the static Gondola site
+   Replaces Tailwind's preflight + the old src/index.css. Every section
+   stylesheet (css/<section>.css) builds on the tokens and helpers here.
+   ========================================================================= */
+
+/* ---- Web fonts (unchanged from the old src/index.css) ------------------- */
+@import url("https://fonts.cdnfonts.com/css/emotional-baggage");
+@import url("https://fonts.cdnfonts.com/css/comic-neue");
+
+/* ---- Design tokens ------------------------------------------------------ */
+:root {
+  --color-noise: #28d5ff;   /* .noise section background            */
+  --color-noise2: #d6ebfe;  /* .noise2 section background           */
+  --color-box: #c3fcf1;     /* link / buy rounded boxes             */
+  --color-footer: #fe93c7;  /* footer background                    */
+  --color-tokenomics: #b3e7fe;
+  --color-black: #0c0608;   /* "the black" whale section            */
+  --breakpoint-lg: 1024px;  /* Tailwind `lg:` == min-width: 1024px  */
+}
+
+/* ---- Reset (distilled from Tailwind preflight) -------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Tailwind preflight makes replaced elements block-level and fluid. Elements
+   that used `max-w-none` opt out by setting `max-width: none` in their own
+   section CSS. */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* ---- Top-level app wrapper (was App.js root div) ------------------------ */
+/* `App flex flex-col justify-center items-center overflow-clip` */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: clip;
+}
+
+/* ---- Font helper classes ------------------------------------------------ */
+.baggage {
+  font-family: "Emotional Baggage", sans-serif;
+}
+
+.comic {
+  font-family: "Comic Neue", sans-serif;
+}
+
+/* ---- Section background-image classes ----------------------------------- */
+/* Ported from src/index.css, repointed to ../assets/. NOTE: the original
+   `.noise`/`.noise2` used a `background-imagee` typo, so the noise texture
+   never actually rendered — only the solid colour showed. To preserve the
+   current look exactly, these keep the solid colour and omit the image. */
+.mainhero {
+  background-image: url("../assets/grassbg.webp");
+  background-size: contain;
+}
+
+.howto {
+  background-image: url("../assets/cloudbackground.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.joinbg {
+  background-image: url("../assets/joinbg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gallery {
+  background-image: url("../assets/fieldlowerbg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.linkbg {
+  background-image: url("../assets/bgtexture.svg");
+  background-size: contain;
+}
+
+.noise {
+  background-color: var(--color-noise);
+}
+
+.noise2 {
+  background-color: var(--color-noise2);
+}
+
+@media (max-width: 768px) {
+  .mainhero {
+    background-size: cover;
+  }
+}
+
+/* ---- Marquee / drift keyframes (ported from src/index.css) -------------- */
+@keyframes moveLeftRight {
+  0% { transform: translateX(-200px); }
+  25% { transform: translateX(200px); }
+  50% { transform: translateX(-200px); }
+  75% { transform: translateX(200px); }
+  100% { transform: translateX(-200px); }
+}
+
+.move-left-right {
+  animation: moveLeftRight 5s infinite;
+}
+
+@keyframes moveLeftToRight {
+  0% { transform: translateX(-20%); }
+  100% { transform: translateX(20%); }
+}
+
+.moving-image {
+  animation: moveLeftToRight 15s linear infinite;
+}
+
+@keyframes moveLeftToRight2 {
+  0% { transform: translateX(20%); }
+  100% { transform: translateX(-20%); }
+}
+
+.moving-image2 {
+  animation: moveLeftToRight2 15s linear infinite;
+}
+
+/* ---- Tailwind built-in animations still referenced in markup ------------ */
+/* `animate-bounce` (Hero skydola) and `animate-pulse` (Howto maxiscarfdola) */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ---- Reusable hover/press effect ---------------------------------------- */
+/* Replaces the repeated
+   `transition-transform duration-200 ease-in-out transform hover:scale-95 active:scale-90`
+   utility stack. Add `hover-press` to any element that used it. */
+.hover-press {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-press:hover {
+  transform: scale(0.95);
+}
+
+.hover-press:active {
+  transform: scale(0.9);
+}
+
+/* ---- Scroll reveal (replaces react-reveal Fade/Bounce) ------------------ */
+/* Add `reveal` (+ an optional direction modifier) to elements that were
+   wrapped in <Fade>/<Bounce>. For <Fade cascade>/<Bounce cascade>, add
+   `data-reveal-cascade` to the wrapper so app.js staggers its `.reveal`
+   descendants. app.js toggles `.is-visible` when the element scrolls in. */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.reveal--left {
+  transform: translateX(-60px);
+}
+
+.reveal--right {
+  transform: translateX(60px);
+}
+
+.reveal--up {
+  transform: translateY(40px);
+}
+
+.reveal--big {
+  transform: scale(0.8);
+}
+
+.reveal--bounce {
+  transition: opacity 0.6s ease,
+    transform 0.8s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Motion-reduction safety ------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .move-left-right,
+  .moving-image,
+  .moving-image2,
+  .animate-bounce,
+  .animate-pulse {
+    animation: none;
+  }
+}

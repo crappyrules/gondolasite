@@ -1,0 +1,146 @@
+.community-join-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.community-join-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Tailwind emits mt-* after my-*, so mt-60 (15rem) wins over my-20 for top. */
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+}
+
+.community-joincommunity-image {
+  width: 24rem;
+}
+
+.community-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.community-social-link {
+  display: inline-flex;
+}
+
+.community-social-icon {
+  width: 3.5rem;
+  margin: 1rem 0.75rem;
+}
+
+.community-pinkblur {
+  z-index: 20;
+  width: 1500px;
+  max-width: none;
+  margin-top: -13rem;
+  margin-bottom: -24rem;
+  display: none;
+}
+
+.community-pinkblur2 {
+  z-index: 20;
+  width: 100vw;
+  max-width: none;
+  margin-top: -6rem;
+  margin-bottom: -24rem;
+  display: flex;
+}
+
+.community-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fe93c7;
+  padding-bottom: 2.5rem;
+  width: 100%;
+}
+
+.community-footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.community-footer-about {
+  width: 4rem;
+}
+
+.community-footer-divider {
+  width: 0.75rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: flex;
+}
+
+.community-footer-howto,
+.community-footer-tokenomics {
+  width: 8rem;
+}
+
+.community-footer-year {
+  width: 8rem;
+}
+
+@media (min-width: 1024px) {
+  .community-join-section {
+    align-items: flex-end;
+    height: 150vh;
+  }
+
+  .community-join-inner {
+    margin-top: 10rem;
+    margin-right: 5rem;
+  }
+
+  .community-joincommunity-image {
+    width: 900px;
+  }
+
+  .community-social-icon {
+    width: 5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .community-pinkblur {
+    width: 3000px;
+    margin-top: -18rem;
+    display: flex;
+  }
+
+  .community-pinkblur2 {
+    margin-top: -18rem;
+    display: none;
+  }
+
+  .community-footer-nav {
+    margin-top: 0;
+  }
+
+  .community-footer-about {
+    width: 13rem;
+  }
+
+  .community-footer-divider {
+    width: 2.5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  .community-footer-howto,
+  .community-footer-tokenomics,
+  .community-footer-year {
+    width: 24rem;
+  }
+}

@@ -1,0 +1,102 @@
+.tokens-tokenomics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #B3E7FE;
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.tokens-title-image {
+  width: 75%;
+}
+
+.tokens-stats-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tokens-stats-cascade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tokens-stat-image {
+  padding: 0.5rem;
+  width: 24rem;
+}
+
+.tokens-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.tokens-gallery-title {
+  width: 24rem;
+}
+
+.tokens-artog-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.tokens-art-image {
+  margin-bottom: 0.5rem;
+}
+
+.tokens-theblack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0C0608;
+  padding: 5rem 1rem;
+}
+
+.tokens-whale-image {
+  width: 100%;
+  margin-bottom: -8rem;
+  z-index: 50;
+}
+
+@media (min-width: 1024px) {
+  .tokens-stats-row {
+    flex-direction: row;
+  }
+
+  /* The stat images live in this cascade wrapper, so it (not just the outer
+     row) must switch to a horizontal row on desktop. */
+  .tokens-stats-cascade {
+    flex-direction: row;
+  }
+
+  .tokens-stat-image {
+    width: 20rem;
+  }
+
+  .tokens-gallery-title {
+    width: 700px;
+  }
+
+  .tokens-artog-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .tokens-art-image {
+    margin-bottom: 1.75rem;
+  }
+
+  .tokens-whale-image {
+    width: 83.333333%;
+  }
+}

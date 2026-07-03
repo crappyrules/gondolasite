@@ -1,0 +1,226 @@
+.about-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.about-miniscarfdola {
+  width: 24rem;
+  position: absolute;
+  top: -5rem;
+  right: 0;
+}
+
+.about-whatis {
+  width: 91.6667%;
+  display: none;
+  margin-bottom: 0.75rem;
+  z-index: 10;
+}
+
+.about-whatismobile {
+  width: 83.3333%;
+  display: flex;
+  margin-bottom: 0.75rem;
+  z-index: 10;
+}
+
+.about-gondolaaboutmobile {
+  display: flex;
+  margin-bottom: 0.75rem;
+  z-index: 10;
+}
+
+.about-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-gondolaabout {
+  display: none;
+  z-index: 10;
+}
+
+.about-video-wrap {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-video {
+  width: 24rem;
+  border-radius: 0.75rem;
+}
+
+.about-video-play {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.about-mobile-copy {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  display: flex;
+}
+
+.about-howto-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 5rem;
+}
+
+.about-thing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* The title wrapper must span the section so the title's 66.67% width
+   resolves against the full width and stays centered. Without this the
+   wrapper shrinks to the image's intrinsic width and the block image
+   left-aligns inside it, pushing the title off-center. */
+.about-thing > [data-reveal-cascade] {
+  width: 100%;
+}
+
+.about-howtobuy {
+  position: relative;
+  width: 66.6667%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 20;
+}
+
+.about-rollblurr {
+  position: absolute;
+  z-index: 12;
+}
+
+.about-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left,
+.about-right {
+  z-index: 20;
+}
+
+.about-step {
+  width: 600px;
+  padding: 0.5rem;
+  z-index: 20;
+}
+
+.about-flooz {
+  width: 400px;
+  height: 680px;
+  padding: 1rem;
+}
+
+.about-lilcloud {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10rem;
+  z-index: 11;
+}
+
+.about-maxiscarfdola-wrap {
+  display: flex;
+  position: absolute;
+  top: -2.5rem;
+}
+
+.about-maxiscarfdola {
+  width: 18rem;
+  z-index: 10;
+}
+
+.about-awkwardgondola {
+  position: absolute;
+  right: 0;
+  width: 2.5rem;
+  z-index: 40;
+}
+
+.about-ordinarygondola {
+  position: absolute;
+  right: 2.5rem;
+  width: 2.5rem;
+  bottom: 10rem;
+  transform: rotate(12deg);
+}
+
+@media (min-width: 1024px) {
+  .about-root {
+    padding-bottom: 5rem;
+  }
+
+  .about-whatis {
+    display: flex;
+  }
+
+  .about-whatismobile,
+  .about-gondolaaboutmobile,
+  .about-mobile-copy {
+    display: none;
+  }
+
+  .about-gondolaabout {
+    display: flex;
+  }
+
+  .about-video-wrap {
+    position: absolute;
+  }
+
+  .about-video {
+    width: 66.6667%;
+    margin-top: 2.5rem;
+  }
+
+  .about-total {
+    flex-direction: row;
+  }
+
+  .about-lilcloud {
+    right: 0;
+    width: 500px;
+  }
+
+  .about-maxiscarfdola-wrap {
+    top: -300px;
+  }
+
+  .about-maxiscarfdola {
+    width: 850px;
+  }
+
+  .about-awkwardgondola {
+    right: 2.5rem;
+    width: 8rem;
+  }
+
+  .about-ordinarygondola {
+    width: 10rem;
+  }
+}
